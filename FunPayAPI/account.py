@@ -453,7 +453,7 @@ class Account:
                 image_link = image_link.get("href")
                 message_text = None
             else:
-                message_text = parser.find("div", {"class": "message-text"}).text.replace(self.__bot_character, "", 1)
+                message_text = parser.find("div", {"class": "chat-msg-text"}).text.replace(self.__bot_character, "", 1)
         except Exception as e:
             logger.debug("SEND_MESSAGE RESPONSE")
             logger.debug(response.content.decode())
